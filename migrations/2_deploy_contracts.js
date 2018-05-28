@@ -1,8 +1,8 @@
-var ConvertLib = artifacts.require("./ConvertLib.sol");
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+var ConvertLib = artifacts.require("./MdgCoin.sol");
+var MetaCoin = artifacts.require("./TmtgCoin.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(MdgCoin);
+  deployer.link(MdgCoin, TmtgCoin);
+  deployer.deploy(TmtgCoin);
 };
